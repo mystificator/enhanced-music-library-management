@@ -1,3 +1,4 @@
+import { handleResponse } from "./ResponseHandler.js";
 export class CustomError extends Error {
     constructor(status, message, details = null) {
         super(message);
