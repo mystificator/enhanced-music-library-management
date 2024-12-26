@@ -5,6 +5,7 @@ import cors from 'cors';
 
 import { userRouter } from './routes/userRoutes.js';
 import { adminRouter } from "./routes/adminRoutes.js";
+import { artistRouter } from "./routes/artistRoutes.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.get("/", async (req, res) => {
 
 app.use("/", userRouter);
 app.use("/users", adminRouter);
+app.use("/artists", artistRouter);
 
 const startServer = async () => {
     try {
