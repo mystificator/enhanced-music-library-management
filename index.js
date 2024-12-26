@@ -8,6 +8,7 @@ import { adminRouter } from "./routes/adminRoutes.js";
 import { artistRouter } from "./routes/artistRoutes.js";
 import { albumRouter } from "./routes/albumRoutes.js";
 import { trackRouter } from "./routes/trackRoutes.js";
+import { favoriteRouter } from "./routes/favoriteRoutes.js";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.use("/users", adminRouter);
 app.use("/artists", artistRouter);
 app.use("/albums", albumRouter);
 app.use("/tracks", trackRouter);
+app.use("/favorites", favoriteRouter);
 
 const startServer = async () => {
     try {
